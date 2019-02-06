@@ -1,0 +1,19 @@
+<%= link_to "Create New Rating", new_rating_path %>
+<p>List of Ratings</p>
+<table width="100%">
+	<tr>
+	  <td>idMovie</td>
+	  <td>rating</td>
+	  <td>Action</td>
+	</tr>
+	<% @ratings.each do |r|%>
+	  <tr>
+	    <td><%=r[:movie_id]%></td>
+	    <td><%=r[:rating]%></td>
+	    <td>
+	      <%= link_to "Edit", edit_rating_path(r[:id]) %> | 
+	      <%= link_to "Delete", rating_path(r[:id]), :method => :delete %>
+	    </td>
+		</tr>
+	<% end %>
+</table>
