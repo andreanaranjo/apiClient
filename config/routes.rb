@@ -5,9 +5,9 @@ Rails.application.routes.draw do
     get '/ratings.json' => 'ratings#index'
     post '/ratings.json' => 'ratings#create'
     scope '/ratings' do
-      get '/:id/edit.json' => 'ratings#edit'
+      #get '/:id/edit.json' => 'ratings#edit'
       get '/:id/show.json'=> 'ratings#show'
-      patch '/:id/update.json' => 'ratings#update'
+      put '/:id/edit.json' => 'ratings#edit'
       delete '/:id/destroy.json'=> 'ratings#destroy'
     end
   end

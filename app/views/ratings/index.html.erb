@@ -2,13 +2,13 @@
 <p>List of Ratings</p>
 <table width="100%">
 	<tr>
-	  <td>idMovie</td>
-	  <td>rating</td>
+	  <td>Movie</td>
+	  <td>Rating</td>
 	  <td>Action</td>
 	</tr>
 	<% @ratings.each do |r|%>
 	  <tr>
-	    <td><%=r[:movie_id]%></td>
+	    <td><%=r[:title]%></td>
 	    <td><%=r[:rating]%></td>
 	    <td>
 	      <%= link_to "Edit", edit_rating_path(r[:id]) %> | 
